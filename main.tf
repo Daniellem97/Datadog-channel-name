@@ -22,7 +22,3 @@ resource "datadog_integration_ms_teams_tenant_based_handle" "iac_managed_teams_c
   channel_name = var.CHANNEL_NAME     # Passed from Spacelift
 }
 
-variable "dd_api_key" {
-  description = "The API key for Datadog integration"
-  type        = string
-}

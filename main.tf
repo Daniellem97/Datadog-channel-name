@@ -8,6 +8,7 @@ terraform {
 }
 
 provider "datadog" {
+  api_url = "https://api.datadoghq.eu/"
 }
 
 variable "CHANNEL_NAME" {

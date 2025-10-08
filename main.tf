@@ -7,7 +7,10 @@ terraform {
   }
 }
 
-provider "datadog" {}
+provider "datadog" {
+  dd_api_key = var.dd_api_key
+  dd_site = "datadoghq.eu"
+}
 
 variable "CHANNEL_NAME" {
   description = "The Microsoft Teams channel name to integrate with Datadog"

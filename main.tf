@@ -8,8 +8,6 @@ terraform {
 }
 
 provider "datadog" {
-  dd_api_key = var.dd_api_key
-  dd_site = "datadoghq.eu"
 }
 
 variable "CHANNEL_NAME" {
@@ -22,4 +20,9 @@ resource "datadog_integration_ms_teams_tenant_based_handle" "iac_managed_teams_c
   tenant_name  = "YourTenantName"     # Replace with your actual tenant
   team_name    = "YourTeamName"       # Replace with your actual team
   channel_name = var.CHANNEL_NAME     # Passed from Spacelift
+}
+
+variable "dd_api_key" {
+  description = "The API key for Datadog integration"
+  type        = string
 }
